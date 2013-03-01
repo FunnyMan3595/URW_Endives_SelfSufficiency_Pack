@@ -1,0 +1,210 @@
+[SUBMENU_START:Weaving]
+
+.Soak Nettles.		"Nettle"			*AGRICULTURE*	/5/ 	\14d\	[patch:10]	|-1|	
+{Nettle}				[remove] [patchwise] [name:Retted %s] [naming:last word]
+{Water}				#1#	[remove] [patchwise]
+			
+.Soak Hemp.		"Hemp"				*AGRICULTURE*	/5/ 	\336h\	[patch:10]	|-1|	
+{Hemp}					[remove] [patchwise]  [name:Retted %s] [naming:last word]
+{Water}				#1#	[remove] [patchwise]
+
+
+// Edit these are the two entries used, swapping \14d\ and \336h\. In the save, anything made with \14d\ has a branch next to it.
+
+.Extract Fibre. 	 "Hemp"				*AGRICULTURE*	/30/ 		[patch:10]	|-1|	
+{Retted *} 	'Soaked Plants' #1#	[remove] [patchwise]  [name:Fibre from %s] [naming:last word]
+{Club} 		'+for scrutching'
+
+.Spin Thread. 		"Cord" 				*COMMON* 	/20/ 		[patch:10]
+{Fibre from *} 	'Plant Fibres'		[remove] [patchwise]  [name:Thread from %s] [naming:last word]
+{Wooden Stake}	'+for a distaff'
+{rock}		'+for a spindle'
+
+.Nettle Cloth. 		"Bandage" 			*COMMON* 	/40/ 	[patch:10]
+{Thread from Nettle} 'Thread'(2) 	[remove] [patchwise]
+{Slender trunk} '+(Backstrap Loom)' (2) [ground]
+{Rope}		'+(Backstrap Loom)' (2) [ground]
+{Knife}
+
+.Linen Cloth. 		"Bandage" 			*COMMON* 	/40/ 	[patch:10]
+{Thread from Hemp} 'Thread'(2) 	[remove] [patchwise]
+{Slender trunk} '+(Backstrap Loom)' (2) [ground]
+{Rope}		'+(Backstrap Loom)' (2) [ground]
+{Knife}
+
+.String.		"Cord"				*COMMON*	/10/	[patch:10]
+{Fibre from *} 	'Plant Fibres'	#0.5#	[remove] [patchwise]
+{knife}
+
+.Rope.							*COMMON*	/30/	[patch:5]
+{Fibre from Hemp}		#1#	[remove] [patchwise]
+{knife}
+			
+.Bag.		  					*COMMON*  	/25/  	[patch:5]		
+{Cloth}  			#1.0#  	[remove] [patchwise]
+{Tying equipment}   			[remove] [patchwise]	
+{Knife}
+
+[SUBMENU_END:Weaving]
+
+
+[SUBMENU_START:Cloth Garments]
+
+.Nettle apron.		*COMMON*	/60/
+{Tying equipment}	(1) 	[remove]
+{Nettle *}  	'Nettle Cloth'	#4.0# 	[remove]
+{Knife} <Small knife>		'A knife good for fine work'
+
+.Nettle cloak.		*COMMON*	/100/
+{Tying equipment}  	(1) 	[remove]
+{Nettle *}  'Nettle Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Nettle cowl.		*COMMON*	/20/
+{Tying equipment}  	(1) 	[remove]
+{Nettle *}  'Nettle Cloth'		#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Nettle shirt.		*COMMON*	/60/
+{Tying equipment}  	(2) 	[remove]
+{Nettle *}  'Nettle Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Nettle trousers.	*COMMON*	/100/
+{Tying equipment}	(2) 	[remove]
+{Nettle *}  'Nettle Cloth'		#4.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Nettle tunic.		*COMMON*	/120/
+{Tying equipment}  	(2) 	[remove]
+{Nettle *}  'Nettle Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen apron.		*COMMON*	/60/
+{Tying equipment}	(1) 	[remove]
+{Linen *}  'Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen cowl.		*COMMON*	/20/
+{Tying equipment}  	(1) 	[remove]
+{Linen *}  'Linen Cloth'		#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen dress.		*COMMON*	/120/
+{Tying equipment}	(4) 	[remove]
+{Linen *}  'Linen Cloth'		#5.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen footrags.	*COMMON*	/20/
+{Linen *}  'Linen Cloth'		#1# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen shirt.		*COMMON*	/60/
+{Tying equipment}  	(2) 	[remove]
+{Linen *}  'Linen Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen trousers.	*COMMON*	/100/
+{Tying equipment}	(2) 	[remove]
+{Linen *}  'Linen Cloth'		#4.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen tunic.		*COMMON*	/120/
+{Tying equipment}  	(2) 	[remove]
+{Linen *}  'Linen Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen Undergarment.	*COMMON*	/150/
+{Tying equipment}  	(4) 	[remove]
+{Linen *}  'Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen Undershirt.	*COMMON*	/80/
+{Tying equipment}	(3) 	[remove]
+{Linen *}  'Linen Cloth'		#2.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Linen Veil.		*COMMON*	/30/
+{Tying equipment}  	(2) 	[remove]
+{Linen *}  'Linen Cloth'		#1# 	[remove]
+{Knife} <Small knife>	'A knife good for fine work'
+
+[SUBMENU_END:Cloth Garments]
+
+[SUBMENU_START:Woollen Garments]
+
+.Woollen apron.		*COMMON*	/75/
+{Tying equipment}	(1) 	[remove]
+{Woollen *}  'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen cloak.		*COMMON*	/90/
+{Tying equipment}  	(1) 	[remove]
+{Woollen *}  'Woollen Cloth'			#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen cowl.		*COMMON*	/25/
+{Tying equipment}  	(1) 	[remove]
+{Woollen *}  'Woollen Cloth'			#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen dress.		*COMMON*	/180/
+{Tying equipment}	(4) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen footrags.	*COMMON*	/25/
+{Woollen *}  	'Woollen Cloth'		#1# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen leggings.	*COMMON*	/120/
+{Tying equipment}	(1) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen Mittens.	*COMMON*	/25/
+{Tying equipment}  	(1) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen Overcoat.	*COMMON*	/90/
+{Tying equipment}  	(1) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen shirt.		*COMMON*	/75/
+{Tying equipment}  	(2) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen socks.		*COMMON*	/25/
+{Tying equipment}  	(1) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen trousers.	*COMMON*	/120/
+{Tying equipment}	(2) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#7# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen tunic.		*COMMON*	/100/
+{Tying equipment}  	(2) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#8# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen Undergarment.	*COMMON*	/180/
+{Tying equipment}  	(4) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen Undershirt.	*COMMON*	/120/
+{Tying equipment}	(4) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+.Woollen Veil.		*COMMON*	/45/
+{Tying equipment}  	(2) 	[remove]
+{Woollen *}  	'Woollen Cloth'		#1# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+
+[SUBMENU_END:Woollen Garments]
