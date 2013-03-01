@@ -21,11 +21,11 @@
 [SUBMENU_START:utility article]
 
 
-.Soak Branches. "Firewood"  *COMMON*  /5/     \1d\    [patch:5] |-1|
+.Soak Branches. "Firewood"  *COMMON*  /5/     \1d\  %-30%   [patch:5] |-2|
 {Branch} (20) [remove] [patchwise] [name:Soaked Branches]
 {Water} #1# [remove] [patchwise]
 
-.Primitive Cord.   "Cord"  *COMMON* /60/  [patch:5] |-1|
+.Primitive Cord.   "Cord"  *COMMON* /60/ %-30%  [patch:5] |-2|
 {Soaked Branches} [remove] [patchwise]
 
 [SUBMENU_END:utility article]
@@ -44,23 +44,20 @@
 {Slender trunk} [remove]
 {Tying equipment} [remove]
 
-.Primitive Stone-Axe. "Stone-Axe"  *COMMON* /2h/ |-1| %10%
-{Stone} '+for blade' [remove]
-{Rock} '+for knapping blade'
-{Slender trunk} '+for handle' [remove]
-{Knife} '+to make handle'
-{Tying equipment} (2) [remove] 
-
-.Bow Stave. "Board" *CARPENTRY* /3h/
+.Bow Stave. "Board" *CARPENTRY* %-10% /3h/ 
 {Log} [remove] [ground]
 {Axe} <Woodsman's Axe>
 
-.Unfinished Longbow. "Board" *CARPENTRY /5h/ |+1|
+.Shaped Bow Stave. "Board" *CARPENTRY*  %-10% /3h/ 
 {Bow Stave} [remove]
+{Axe} <Handaxe>
+
+.Unfinished Longbow. "Board" *CARPENTRY  %-10% /5h/ |+1|
+{Shaped Bow Stave} [remove]
 {Axe} <Carving Axe>
 {Knife}
 
-.Longbow. *CARPENTRY* /2h/
+.Longbow. *CARPENTRY* %-10% /2h/ |+1|
 {Unfinished Longbow} [remove]
 {Leather} #2# [remove] '+for grip&backing'
 {Tying equipment} (2) [remove]
@@ -72,17 +69,19 @@
 
 
 [SUBMENU_START:transport]
-.Rough Dugout Hull. "Tree Trunk" *TIMBERCRAFT* /4h/ %20%
+.Rough Dugout Hull. "Tree Trunk" *TIMBERCRAFT* /4h/
 {Tree Trunk} [ground] [remove] [noquality]
 {Axe}<Broad axe>
 
-.Burned-out Dugout Hull. "Tree Trunk" *TIMBERCRAFT* /3h/  \12h\ %10%
+.Burned-out Dugout Hull. "Tree Trunk" *TIMBERCRAFT* /3h/  \12h\
 {Rough Dugout Hull} [ground] [remove]
 {Fire} [ground]
 {Shovel} '+for moving hot coals'
 
-.Dugout Canoe. "Punt" *TIMBERCRAFT* /5h/ %10% |1|
+.Dugout Canoe. "Punt" *TIMBERCRAFT* /5h/  |1|
 {Burned-out Dugout Hull} [ground] [remove]
 {Axe}<Carving axe>
 
 [SUBMENU_END:transport]
+
+-end

@@ -1,2 +1,5 @@
 .Ironworking.  -I- *MAKE*
 .Iron Crafts.  -J- *MAKE*
+.Iron Armors. -K- *MAKE*
+
+-end

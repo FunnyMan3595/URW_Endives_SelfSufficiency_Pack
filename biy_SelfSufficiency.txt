@@ -1,6 +1,6 @@
 [SUBMENU_START:building]
 
-.Water. "Well"   *BUILDING*  /5h/   |+1|
+.Water. "Well"   *BUILDING*  /5h/   |+2|
 {Shovel}
 {Stone} (50) [remove] [ground] '+for walls'
 {Rock} (30) [remove] [ground] '+for gravel packing'
@@ -11,6 +11,8 @@
 
 
 [SUBMENU_END:building]
+
+-end
 
 
 

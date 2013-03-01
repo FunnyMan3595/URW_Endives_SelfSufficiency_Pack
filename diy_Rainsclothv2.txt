@@ -208,3 +208,4 @@
 {Knife} <Small knife> 'A knife good for fine work'
 
 [SUBMENU_END:Woollen Garments]
+-end
